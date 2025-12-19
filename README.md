@@ -7,17 +7,7 @@
 npm install
 ```
 
-### 2. Iniciar PocketBase (Backend)
-En una terminal, ejecuta:
-```bash
-npm run pocketbase
-```
-
-Esto iniciará el servidor de PocketBase en `http://127.0.0.1:8090`
-
-**Importante**: Deja esta terminal abierta mientras trabajas en el proyecto.
-
-### 3. Iniciar el servidor de desarrollo (Frontend)
+### 2. Iniciar el servidor de desarrollo (Frontend)
 En otra terminal, ejecuta:
 ```bash
 npm run dev
@@ -25,7 +15,7 @@ npm run dev
 
 Esto iniciará el servidor de Vite, normalmente en `http://localhost:5173`
 
-### 4. Abrir la aplicación
+### 3. Abrir la aplicación
 Abre tu navegador y ve a la URL que muestra Vite (generalmente `http://localhost:5173`)
 
 ## 📱 Estructura del Proyecto
@@ -50,7 +40,7 @@ Abre tu navegador y ve a la URL que muestra Vite (generalmente `http://localhost
 - `eventStore.js` - Gestión de eventos (CRUD)
 
 ### Backend
-- PocketBase en `src/backend/config/pocketbase/`
+- PocketBase en una máquina virtual de Azure
 - Servicios en `src/backend/services/`
 
 ## 🔧 Tecnologías
@@ -65,13 +55,9 @@ Abre tu navegador y ve a la URL que muestra Vite (generalmente `http://localhost
 ## 📝 Acceso a PocketBase Admin
 
 Una vez iniciado PocketBase, puedes acceder al panel de administración en:
-`http://127.0.0.1:8090/_/`
+`http://20.240.219.184:8090/_/`
 
 ## ⚠️ Solución de Problemas
-
-### Error: "Failed to fetch"
-- Verifica que PocketBase esté corriendo en `http://127.0.0.1:8090`
-- Revisa que no haya otro servicio usando el puerto 8090
 
 ### Error: "No se pudo iniciar sesión"
 - Asegúrate de que la base de datos de PocketBase tenga usuarios creados
@@ -80,10 +66,3 @@ Una vez iniciado PocketBase, puedes acceder al panel de administración en:
 ### Warnings de TypeScript
 Los warnings sobre módulos `.js` son normales porque los stores están en JavaScript.
 No afectan la funcionalidad de la aplicación.
-
-## 🏗️ Próximos Pasos
-
-1. Compilar como app móvil con Capacitor
-2. Probar en dispositivos reales
-3. Personalizar tema de Ionic
-4. Agregar más funcionalidades móviles (cámara, notificaciones, etc.)
